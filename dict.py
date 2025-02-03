@@ -1,46 +1,131 @@
-#range-prints the values within the given range
-list1=['abbraka','dabra','dabraka','abbra',5252,True]
-for i in range(0,len(list1)):
-    print(i,list1[i])
 
 
-#dictionary--key value pairs
-# keys must be unique and value must not be unique, and keys can be strings or numbers
-# we can access value using keys but we can't use values to access keys and we can change values using indexing as dictionaryis mutable
-# if duplicate keys are given then it updates to last given duplicate key and we can also delete a key
-dict1={1:'hello',2:'there',3:'nice',4:'meet',5:'you'}
-print(dict1[2])
-print(dict1[1])
-print(dict1[2])
-print(dict1[5])
-dict1['6']='!!!!!'
-dict1['6']='****'
-dict1[6]='hhhhhh'
-print(dict1)
-print(len(dict1))
+# try to define variables using some meaningful context and follow pascal and snakes rules
+# naming conventions-3 types
+# pascal case = identifying distinct/different words in one word using capital letters of each first word.(HumanBeing)
+RandomInput = int(input())
+print(RandomInput)
+# ,snake case = all small letters seperated by an underscore(_) to differentiate words.(human_being)
+random_input = int(input())
+print(random_input)
+# , camel case = first word is small letter and next words will start with caps(not used in python).(humanBeing)
+# we use all caps for defining a constant
+# Truthy values and falsy values
+# truthy = all numbers except 0,true and all strings except empty strings
+# falsy = 0,false,''
+ 
+# conversions
+
+# 1111101 - 1*1 + 0*2 + 1*4 + 1*8 + 1*16 + 1*32 + 1*64
+# 125
+# 1256 = 6 40 64 512 = 622
+# hexadecimal
+# 10-A .....15-F
+# AF1= 1+240+2560 = 2801
+# 111-binary=7
+# 111-octal=1+8+64=73
+# 111-hex=1+16+256=273
 
 
-#set datatype-colllection of unique,unordered,finite elements and set is not indexable and defined with {}
-set1={2,4,2,2,2,4,5,5,6,2}
-print(set1)
-set2={'hello','hello again',12,12,'hello','hello again','ok bye'}
-print(set2)
-print(len(set1))
+num=20
+num += 2
+print(num)
+num /= 2
+print(num)
+num //= 2
+print(num)
+num **= 2
+print(num)
 
-# none datatype- for memory efficiency and used to store nothing in memory block when we dont want anything inside that memory block
-num1=57
-num1=None
-print(num1)
-print(type(num1))
+print(None and 2)
+print(10 and 'str')
+print('' and 'str')
+print(56 and '')
+print("-------------")
+print(None or 2)
+print(10 or 'str')
+print('' or 'str')
+print(56 or '')
+print(True or False)
+print("-------------")
+print(100 | 1111)
+print(10 | 11)
+print(1 | 1)
+print(599 | 999)
+print(10 | 11)
+print(1 | 1)
+print(599 | 999)
+print(bin(2))
+print(12 ^ 14)
 
-# c=int(input("enter a value"))
-# print(c)
-a=int(input("enter 1st value"))
-b=int(input("enter 2nd value"))
-print("Result=",a+b)
-print("Result=",a-b)
-print("Result=",a*b)
-print("Result=",a/b)
-print("Result=",a//b)
-print("Result=",a**b)
-print("Result=",a%b)
+# SHIFT
+print("shift")
+print(15 << 1)
+print(15 >> 1)
+print(14 << 1)
+print(14 >> 1)
+
+
+num1 = 3.24567890
+if num1 > 0 and num1 != 1:
+    print("+ve")
+elif num1 == 1:
+    print("one")
+elif num1 == 0:
+    print("zero")
+elif num1 == -1:
+    print("-1")
+elif num1 == -2:
+    print("-2")
+else:
+    print("-ve")
+
+
+ 
+current_bill_units = int(input("enter units"))
+if current_bill_units <= 100:
+    if current_bill_units <= 50:
+        print("current bill amount = 0")
+    else:
+        print("current bill amount = ",current_bill_units * 50)
+else:
+    if current_bill_units <= 200:
+        print("current bill amount = ",current_bill_units * 100)
+    else:
+        if current_bill_units <= 300:
+            print("current bill amount = ",current_bill_units * 150)
+
+for i in range(0,21):
+    if i%2 == 0:
+        print("even num = ",i)
+    else:
+        print("odd number = ",i)
+
+        # ------OR---------
+
+for i in range(0,21,2):
+    print(i)
+
+
+
+hello=int(input("enter any no."))
+while hello == 10:
+    print("nums = ",hello)
+    hello += 2
+
+i=5
+while i < 26:
+    if i%2 == 0:
+        print("even",i)
+    else:
+        print("odd",i)
+    i+=1
+
+start=1
+while start < 11:
+    roll=1
+    if start!=5 and start!=7:
+        while roll < 31:
+            print(start,roll)
+            roll += 1
+    start += 1
