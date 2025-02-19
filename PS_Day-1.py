@@ -40,6 +40,11 @@ if num1 >= 40:
 else:
     print("fail")
 
+# using ternary operator
+marks = 20
+marks = "pass" if marks >= 40 else "fail"
+print(marks)
+
 # day of week
 days = 6
 if days == 1:
@@ -58,11 +63,6 @@ elif days == 7:
     print("sunday")
 else:
     print("there are only 7 days in a week")
-
-# using ternary operator
-marks = 20
-marks = "pass" if marks >= 40 else "fail"
-print(marks)
 
 # calculator
 operation = input("enter operation which you want to perform from 'add or sub or mul or div'").lower()  #to convert all uppercase to lower case strings
